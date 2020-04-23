@@ -1,16 +1,16 @@
 # Zadanie #1
-Używając dowolnych narzędzi wyświetl listę stu elementów, która będzie reprezentować menu restauracji.
-Każdy z elementów powinien składać się z:
-- indexu zaczynając od 1
-- nazwy którą należy pobrać z pliku salads.json
-- ceny którą należy dodać wg. wzorca (jeżeli któreś z dań pasuje do dwóch kryteriów to należy przyjąć kryterium numer 1):  
-    1. 15zł co trzecie danie
-    2. 10zł danie zaczynające się na literę "E", "R" lub "G"
-    3. 20zł dania które nie pasują do żadnego z powyższych
-- checkboxa którym będzie można zaznaczyć dane danie. Zaznaczone danie powinno być wyróżnione za pomocą CSS.
+Please display a mneu of 100 dishes for a restuarant:
 
-Sumę cen wszystkich zaznaczonych dań należy wyświetlić 
-pod listą. Sugerowany layout:
+Each line should consist of:
+- index number starting form  1
+- name taken from file salads.json
+- price which has to be added accordingly to the pattern (if the dish fits to both then you take the first criterium):  
+    1. 15euro every third dish
+    2. 10euro dish beginns with letter "E", "R" lub "G"
+    3. 20euro dish which does not fit to any above
+- checkbox.
+
+The price sum must be displayed under the list. Suggested layout:
 
 ![Suggested View](./suggested_view.png)
 
