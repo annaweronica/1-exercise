@@ -1,6 +1,8 @@
 //global variable _name
 //var _SALADS;
 
+var total = 0;
+
 fetch("./salads.json")
     .then(function(resp) {
         //return stop exectuitng the code and the vaule is returend and console log just print to console
@@ -23,11 +25,11 @@ function populateMenu(data){
         price = "10";
         }     
 
-        let menuItem = "<tr data-price='"+price+"'>"; 
+        let menuItem = "<tr>"; 
         menuItem += "<td>" + (i+1).toString() + "</td>";
         menuItem += "<td>" + data[i] + "</td>";
         menuItem += "<td>" + price + "zl </td>";
-        menuItem += "<td><input type='checkbox'></td>";
+        menuItem += "<td><input type='checkbox' onclick='totalPrice(this, "+ price + ")'></td>";
         menuItem += "</tr>";
 
     document.getElementById("menu-table").innerHTML += menuItem;
@@ -35,12 +37,12 @@ function populateMenu(data){
     }
 }
 
-//onlick o checkbox
-//global var "total"
-//when thicked you add 
-//data attribute (parent attribute)
+function totalPrice(element, priceAdded){
+    if (element.checked){   
+        total += parseInt(priceAdded);
+    } else {
+        total -= parseInt(priceAdded);
+    }
 
-
-
-
-
+    document.getElementById("sum").innerHTML = total;
+}
